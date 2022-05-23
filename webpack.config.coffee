@@ -19,7 +19,7 @@ pug_rule =
 
 sass_rule =
   test: /\.(c|s[ac])ss$/
-  use: ['css-loader', 'sass-loader']
+  use: ['css-loader', 'postcss-loader', 'sass-loader']
 
 module.exports =
   mode: 'development'
