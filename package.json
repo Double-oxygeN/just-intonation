@@ -1,0 +1,19 @@
+{
+  "name": "justintonation",
+  "version": "1.0.0",
+  "description": "Just Intonation Experiments",
+  "main": "src/main.nim",
+  "repository": "https://github.com/Double-oxygeN/just-intonation",
+  "author": "Double-oxygeN",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "coffeescript": "^2.7.0",
+    "css-loader": "^6.7.1",
+    "nim-loader": "^0.3.3",
+    "pug-plugin": "^2.5.0",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
