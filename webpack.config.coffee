@@ -29,7 +29,7 @@ module.exports =
   output:
     path: path.resolve(__dirname, 'dist')
     publicPath: '/'
-    filename: '[name]-[contenthash:12].bundle.js'
+    filename: '[name]-[contenthash:7].bundle.js'
 
   module:
     rules: [
