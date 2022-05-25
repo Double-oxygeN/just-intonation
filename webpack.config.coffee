@@ -9,6 +9,7 @@ nim_rule =
       flags: ['-d:debug']
   }]
 
+
 pug_rule =
   test: /\.pug$/
   use: [{
@@ -17,9 +18,11 @@ pug_rule =
       method: 'render'
   }]
 
+
 sass_rule =
   test: /\.(c|s[ac])ss$/
   use: ['css-loader', 'postcss-loader', 'sass-loader']
+
 
 module.exports =
   mode: 'development'
@@ -29,7 +32,7 @@ module.exports =
   output:
     path: path.resolve(__dirname, 'dist')
     publicPath: '/'
-    filename: '[name]-[contenthash:7].bundle.js'
+    filename: '[name].bundle.js'
 
   module:
     rules: [
