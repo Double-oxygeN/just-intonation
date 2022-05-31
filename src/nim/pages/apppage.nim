@@ -1,6 +1,7 @@
 import karax/[karaxdsl, vdom]
 import ../utils/boxicons
 from ../components/navbarelem import navBar
+from ../components/footerelem import createFooter
 
 func app*: VNode =
   result = buildHtml(section(class="hero is-fullheight is-light")):
@@ -79,11 +80,4 @@ func app*: VNode =
                   text " 1 ショット"
 
     tdiv(class="hero-foot"):
-      footer(class="section"):
-        tdiv(class="content is-small has-text-centered"):
-          p:
-            span(class="icon-text"):
-              text "© 2022 Double-oxygeN "
-              a(href="https://github.com/Double-oxygeN/just-intonation", class="has-text-weight-semibold"):
-                span(class="icon"):
-                  boxIcon("github", BoxIconType.logo)
+      createFooter()
