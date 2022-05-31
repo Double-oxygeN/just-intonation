@@ -1,12 +1,12 @@
 import karax/[karaxdsl, vdom]
 import ../utils/boxicons
-from ../components/navbarelem import navBar
+from ../components/navbarelem import createNavbar
 from ../components/footerelem import createFooter
 
 func app*: VNode =
   result = buildHtml(section(class="hero is-fullheight is-light")):
     tdiv(class="hero-head"):
-      navBar()
+      createNavbar()
 
     tdiv(class="hero-body"):
       main(class="container is-fullhd"):

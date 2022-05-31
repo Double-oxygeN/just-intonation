@@ -1,6 +1,6 @@
 import karax/[vdom, karaxdsl]
 
-func navBar*: VNode =
+func createNavbar*: VNode =
   result = buildHtml(nav(class="navbar has-shadow")):
     tdiv(class="navbar-brand"):
       h1(class="navbar-item title has-text-left"):
