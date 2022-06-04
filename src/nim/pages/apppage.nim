@@ -17,9 +17,10 @@ func appBody: VNode =
                 boxIcon("play")
 
           tdiv(class="control"):
-            label(class="checkbox"):
-              input(`type`="checkbox")
-              text " 1 ショット"
+            label(class="checkbox", title="1 ショット"):
+              span(class="ckbx-style-12"):
+                input(`type`="checkbox", id="one-shot")
+                label(`for`="one-shot")
 
 func app*: VNode =
   result = buildHtml(section(class="hero is-fullheight is-light")):

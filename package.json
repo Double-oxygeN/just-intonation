@@ -28,6 +28,7 @@
   "dependencies": {
     "boxicons": "^2.1.2",
     "bulma": "^0.9.4",
+    "css-checkbox-library": "^1.5.2",
     "normalize.css": "^8.0.1"
   }
 }
