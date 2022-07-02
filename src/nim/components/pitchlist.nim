@@ -1,19 +1,19 @@
-import karax/[vdom, karaxdsl]
+import karax/[karax, vdom, karaxdsl]
 from pitchitems import createInvisiblePitchItem, createRootPitchItem, createAdditionalPitchItem
 from addpitchbuttonelem import createAddPitchButton
+import ../models/stores except store
 
-func createPitchList*: VNode =
-  result = buildHtml(tdiv(class="columns is-centered is-vcentered")):
-    tdiv(class="column is-2"):
+proc createPitchList*(rootPitch: var float; additionalPitches: var seq[AdditionalPitch]): VNode =
+  result = buildHtml(tdiv(class="columns is-centered is-vcentered is-desktop")):
+    tdiv(class="column is-2-desktop"):
       createInvisiblePitchItem()
 
-    tdiv(class="column is-2"):
-      createRootPitchItem()
+    tdiv(class="column is-2-desktop"):
+      createRootPitchItem(rootPitch)
 
-    for i in 1..<4:
-      tdiv(class="column is-2"):
-        createAdditionalPitchItem(i)
+    for pitch in mitems(additionalPitches):
+      tdiv(class="column is-2-desktop", index=pitch.idx):
+        createAdditionalPitchItem(pitch, additionalPitches)
 
-    tdiv(class="column is-2"):
-      createAddPitchButton(false)
-
+    tdiv(class="column is-2-desktop"):
+      createAddPitchButton(additionalPitches)

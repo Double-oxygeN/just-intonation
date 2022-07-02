@@ -2,6 +2,10 @@
 
 純正律和音の実験台
 
+## Nim dependency list
+
+* karax [1.2.1]
+
 ## Build
 
 ```shell
